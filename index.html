@@ -11,7 +11,10 @@
 body{margin:0;font-family:system-ui,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
 a{color:var(--blue)}
 header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:12px 24px}
-.brand{text-decoration:none;color:var(--navy);display:flex;align-items:baseline;gap:10px}
+.brand{text-decoration:none;color:var(--navy);display:flex;align-items:center;gap:10px}
+.logo-mark{width:44px;height:44px;flex:none;filter:drop-shadow(0 3px 6px rgba(10,102,194,.4))}
+.brand .txt{display:flex;flex-direction:column;line-height:1.15}
+.brand .sub{font-size:1.05rem;font-weight:700;color:var(--navy);letter-spacing:.2px}
 .logo-blink{font-size:1.7rem;font-weight:800;color:var(--blue);display:inline-block;animation:pulse 1.6s ease-in-out infinite,float 3s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;text-shadow:0 0 0 transparent}50%{opacity:.35;text-shadow:0 0 14px var(--blue)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
@@ -20,72 +23,336 @@ header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 2px 10px rg
 nav{margin-left:auto;display:flex;flex-wrap:wrap;gap:14px}
 nav a{text-decoration:none;color:var(--navy);font-weight:600;font-size:.92rem}
 nav a:hover{color:var(--blue)}
-.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:700;box-shadow:0 6px 14px rgba(10,102,194,.4);border:0;font-size:1rem;cursor:pointer}
-.btn:hover{background:#084f96}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:700;box-shadow:0 6px 14px rgba(10,102,194,.4);border:0;font-size:1rem;cursor:pointer;transition:all .2s ease}
+.btn:hover{background:#084f96;transform:translateY(-1px);box-shadow:0 8px 18px rgba(10,102,194,.5)}
 .btn.alt{background:#fff;color:var(--blue);box-shadow:0 4px 12px rgba(0,0,0,.15)}
-.wrap{max-width:1100px;margin:0 auto;padding:60px 20px}
-.hero{background:linear-gradient(135deg,#0b2545,#13518f);color:#fff}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
-.hero h1{font-size:2.3rem;line-height:1.2;margin:.3em 0}
-.hero p{opacity:.92}
-.hero .tag{background:rgba(255,255,255,.15);padding:4px 12px;border-radius:20px;font-size:.85rem}
-.hero svg{width:100%;height:auto;filter:drop-shadow(0 16px 24px rgba(0,0,0,.4))}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-.stats div{background:rgba(255,255,255,.1);padding:12px;border-radius:10px;font-size:.85rem}
-.stats b{display:block;font-size:1rem}
-h2{font-size:2rem;margin:.2em 0 .3em;color:var(--navy)}
-.lead{max-width:720px;color:#445}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:28px}
-.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(10,40,80,.15);transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-5px);box-shadow:0 16px 32px rgba(10,40,80,.25)}
-.pic{height:120px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--c1,#0a66c2),var(--c2,#0b2545))}
-.pic svg{width:70px;height:70px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.card .body{padding:16px 18px 20px}
-.card h3{margin:0 0 6px;color:var(--blue);font-size:1.1rem}
-.card ul{margin:0;padding-left:18px;font-size:.93rem}
-.card p{margin:0;font-size:.93rem}
-.qb{background:#eaf6e8}
-.qb-label{display:inline-block;background:var(--green);color:#fff;font-weight:800;padding:9px 20px;border-radius:8px;letter-spacing:.6px;box-shadow:0 7px 18px rgba(44,160,28,.5),0 2px 0 rgba(0,0,0,.2);text-shadow:0 2px 5px rgba(0,0,0,.4);transform:rotate(-1.5deg)}
-.qb .pic{--c1:#2ca01c;--c2:#0f5f0a}
-.qb .card h3{color:#1d7a10}
-.qb-hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:26px 0}
-.qb-hero svg{width:100%;height:auto;border-radius:16px;box-shadow:0 14px 34px rgba(0,0,0,.25)}
-.note{background:#fff;border-left:5px solid var(--green);padding:12px 16px;border-radius:8px;margin-top:24px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
-.tech{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.tech span{background:#fff;padding:7px 14px;border-radius:20px;box-shadow:0 3px 8px rgba(0,0,0,.1);font-size:.9rem}
-.req{background:var(--navy);color:#fff}
-.req h2{color:#fff}
-.reqgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:start}
-form{background:#fff;color:var(--ink);padding:26px;border-radius:16px;box-shadow:0 12px 34px rgba(0,0,0,.35);display:grid;gap:14px}
-label{font-weight:600;font-size:.9rem;display:grid;gap:6px}
-input,select,textarea{font:inherit;padding:11px 12px;border:1px solid #c5d0dc;border-radius:8px;width:100%}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-color:var(--blue)}
-.hp{position:absolute;left:-9999px}
-footer{background:#071a33;color:#b8c6d8;text-align:center;padding:24px;font-size:.88rem}
-@media(max-width:820px){.hero .wrap,.qb-hero,.reqgrid{grid-template-columns:1fr}nav{margin-left:0}.hero h1{font-size:1.8rem}}
 
-.logo-mark{width:44px;height:44px;flex:none;align-self:center;filter:drop-shadow(0 3px 6px rgba(10,102,194,.4))}
-.brand{align-items:center}
-.brand .txt{display:flex;flex-direction:column;line-height:1.15}
-.brand .sub{font-size:1.05rem;font-weight:700;color:var(--navy);letter-spacing:.2px}
-.wrap-s{max-width:1100px;margin:0 auto;padding:28px 20px}
+.wrap{max-width:1100px;margin:0 auto;padding:30px 20px}
+.wrap-s{max-width:1100px;margin:0 auto;padding:20px 20px}
+
+.hero{background:linear-gradient(135deg,#0b2545,#13518f);color:#fff;padding:20px 0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.hero h1{font-size:2.3rem;line-height:1.2;margin:.2em 0}
+.hero p{opacity:.92;margin:.5em 0}
+.hero .tag{background:rgba(255,255,255,.15);padding:4px 12px;border-radius:20px;font-size:.85rem}
+
+/* High-Visibility Email & Copy Button Styling */
+.email-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 10px 0;
+}
+.highlight-email {
+  color: #60a5fa !important;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  letter-spacing: .3px;
+}
+.highlight-email:hover {
+  text-decoration: underline;
+  color: #93c5fd !important;
+}
+.copy-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.copy-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+.copy-btn.copied {
+  background: var(--green);
+}
+
+/* Vertical Top-to-Bottom Stacked Layout for Hero Media */
+.hero-media-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.media-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.media-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.media-title::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--green);
+  border-radius: 50%;
+}
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.45);
+  border: 2px solid rgba(255,255,255,.2);
+  background: #102f58;
+  display: block;
+}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.stats div{background:rgba(255,255,255,.1);padding:10px;border-radius:10px;font-size:.85rem}
+.stats b{display:block;font-size:1rem}
+
+h2{font-size:2rem;margin:.1em 0 .2em;color:var(--navy)}
+.lead{max-width:720px;color:#445;margin-bottom:12px}
+
+/* Wider Lead Text specifically for the About section */
+.lead-wide{max-width:950px;color:#334155;font-size:1.08rem;line-height:1.65;margin-bottom:14px}
+
+/* --- UPDATED ENHANCED SERVICES GRID --- */
+.grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(11, 37, 69, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 38px rgba(10, 102, 194, 0.18);
+  border-color: #cbd5e1;
+}
+.pic {
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #0b2545, #1d4ed8);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+}
+.pic.c-linux { background: linear-gradient(135deg, #0f172a, #1e3a8a); }
+.pic.c-win { background: linear-gradient(135deg, #0b2545, #0284c7); }
+.pic.c-mail { background: linear-gradient(135deg, #1e1b4b, #2563eb); }
+.pic.c-db { background: linear-gradient(135deg, #0f2d4a, #0369a1); }
+.pic.c-cloud { background: linear-gradient(135deg, #111827, #0284c7); }
+.pic.c-lock { background: linear-gradient(135deg, #062038, #0d9488); }
+
+.pic svg {
+  width: 58px;
+  height: 58px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+}
+.card:hover .pic svg {
+  transform: scale(1.1);
+}
+.card .body {
+  padding: 20px 22px 22px;
+  flex: 1;
+}
+.card h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+.card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card li {
+  font-size: 0.92rem;
+  color: #334155;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+.card li::before {
+  content: "✓";
+  color: #2563eb;
+  font-weight: 900;
+  font-size: 0.95rem;
+  background: #eff6ff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.qb{background:#eaf6e8;padding:20px 0}
+.qb-label{display:inline-block;background:var(--green);color:#fff;font-weight:800;padding:9px 20px;border-radius:8px;letter-spacing:.6px;box-shadow:0 7px 18px rgba(44,160,28,.5),0 2px 0 rgba(0,0,0,.2);text-shadow:0 2px 5px rgba(0,0,0,.4);transform:rotate(-1.5deg)}
 .qb-label.sm{padding:5px 14px;font-size:.85rem;transform:none;box-shadow:0 4px 10px rgba(44,160,28,.45),0 1px 0 rgba(0,0,0,.2)}
 .qb-strip{background:#eaf6e8;border-bottom:1px solid #cfe8cb}
-.qb-strip .wrap-s{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:14px 20px}
+.qb-strip .wrap-s{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:10px 20px}
 .qb-strip p{margin:0;font-size:.95rem;flex:1;min-width:260px}
-.h2s{font-size:1.5rem;margin:.4em 0 .2em}
-.qgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:16px 0}
+.h2s{font-size:1.5rem;margin:.3em 0 .1em}
+
+.qgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:14px 0}
 .qi{display:flex;gap:12px;background:#fff;padding:12px 14px;border-radius:10px;box-shadow:0 4px 12px rgba(10,40,80,.12)}
 .qi .ic{width:40px;height:40px;flex:none;border-radius:10px;background:linear-gradient(135deg,#2ca01c,#0f5f0a);display:flex;align-items:center;justify-content:center}
 .qi svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .qi h4{margin:0;font-size:.95rem;color:#1d7a10}.qi p{margin:2px 0 0;font-size:.85rem;color:#445}
-.qb .tech{margin-top:10px}.qb .tech span{font-size:.82rem;padding:5px 12px}
-.qb .note{margin-top:14px;font-size:.88rem}
+.qb .note{margin-top:12px;font-size:.88rem;background:#fff;border-left:5px solid var(--green);padding:10px 14px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+
+/* Bolder & Attractive Technologies Pill Styling */
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.tech span {
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid #dbe3ed;
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  cursor: default;
+}
+.tech span:hover {
+  background: linear-gradient(135deg, #0a66c2, #0b2545);
+  color: #ffffff;
+  border-color: #0a66c2;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(10, 102, 194, 0.35);
+}
+.qb .tech span {
+  background: linear-gradient(135deg, #ffffff, #f0fdf4);
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  font-size: 0.88rem;
+  padding: 7px 14px;
+}
+.qb .tech span:hover {
+  background: linear-gradient(135deg, #2ca01c, #0f5f0a);
+  color: #ffffff;
+  border-color: #2ca01c;
+  box-shadow: 0 8px 18px rgba(44, 160, 28, 0.35);
+}
+
+/* Request Section & Modern 3D Compact Form */
+.req{background:var(--navy);color:#fff;padding:24px 0}
+.req h2{color:#fff}
+.reqgrid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center}
+
+form{
+  background:linear-gradient(145deg,#ffffff,#f0f4f9);
+  color:var(--ink);
+  padding:18px 20px;
+  border-radius:16px;
+  box-shadow:0 12px 28px rgba(0,0,0,.35), inset 0 1px 1px rgba(255,255,255,0.8), 0 4px 0 #cbd5e1;
+  border:1px solid #dbe3ed;
+  display:grid;
+  gap:8px;
+  max-width:440px;
+  margin:0 auto;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label{font-weight:600;font-size:.82rem;display:grid;gap:4px;color:#2c3e50}
+input,select,textarea{
+  font:inherit;
+  padding:8px 10px;
+  border:1px solid #cbd5e1;
+  border-radius:7px;
+  width:100%;
+  font-size:.88rem;
+  background:#f8fafc;
+  box-shadow:inset 0 2px 4px rgba(0,0,0,.04);
+  transition:all .2s ease;
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;
+  border-color:var(--blue);
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(10,102,194,.2), inset 0 1px 2px rgba(0,0,0,.02);
+}
+textarea{resize:vertical}
+.form-btn{
+  margin-top:4px;
+  padding:10px;
+  font-size:.95rem;
+  border-radius:8px;
+  background:linear-gradient(180deg,#0a66c2,#084f96);
+  color:#fff;
+  font-weight:700;
+  border:1px solid #063d75;
+  box-shadow:0 4px 0 #053261, 0 6px 12px rgba(0,0,0,.2);
+  text-shadow:0 1px 2px rgba(0,0,0,.3);
+  cursor:pointer;
+}
+.form-btn:active{
+  transform:translateY(3px);
+  box-shadow:0 1px 0 #053261, 0 2px 4px rgba(0,0,0,.2);
+}
+
+.hp{position:absolute;left:-9999px}
+footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size:.88rem}
+
+@media(max-width:860px){
+  .hero .wrap,.reqgrid{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  nav{margin-left:0}
+  .hero h1{font-size:1.8rem}
+}
+@media(max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body id="top">
 
-<!-- Icon library (pictures) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-inv" viewBox="0 0 48 48"><path d="M12 5h24v38l-4-3-4 3-4-3-4 3-4-3-4 3z"/><path d="M18 15h12M18 22h12M18 29h7"/></symbol>
   <symbol id="i-bill" viewBox="0 0 48 48"><rect x="5" y="12" width="38" height="24" rx="3"/><circle cx="24" cy="24" r="6"/><path d="M10 18v1M38 29v1"/></symbol>
@@ -120,32 +387,34 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:24px;font-size
       <span class="tag">Toronto, Ontario</span>
       <h1>Linux and Windows infrastructure, run by engineers from banking and telecom.</h1>
       <p>Enterprise-grade support for Linux and Windows servers, desktops and hybrid environments. We help small businesses, MSPs and IT teams with project work, on-demand troubleshooting and QuickBooks support.</p>
+      
+      <!-- Highlighted Email with Copy Button -->
+      <div class="email-box">
+        <span>Email:</span> 
+        <a id="emailAddr" class="highlight-email" href="mailto:info@techhelpto.com">info@techhelpto.com</a>
+        <button class="copy-btn" onclick="copyEmail()">Copy Email</button>
+      </div>
+
       <p><a class="btn" href="#request">Book a consultation</a> <a class="btn alt" href="#services">See all services</a></p>
-      <p>Email: <a style="color:#fff" href="mailto:info@techhelpto.com">info@techhelpto.com</a></p>
+      
       <div class="stats">
         <div><b>15+ years</b>combined, enterprise level</div>
         <div><b>Telecom, banking</b>and insurance</div>
         <div><b>Linux, Windows</b>Veeam, NetApp, QuickBooks</div>
       </div>
     </div>
-    <!-- Hero picture: server rack + monitor -->
-    <svg viewBox="0 0 400 320" role="img" aria-label="Servers and monitor illustration">
-      <rect x="20" y="30" width="130" height="260" rx="10" fill="#16345f" stroke="#5aa2ee" stroke-width="3"/>
-      <g fill="#0b2545" stroke="#5aa2ee" stroke-width="2">
-        <rect x="32" y="46" width="106" height="38" rx="5"/><rect x="32" y="94" width="106" height="38" rx="5"/>
-        <rect x="32" y="142" width="106" height="38" rx="5"/><rect x="32" y="190" width="106" height="38" rx="5"/>
-        <rect x="32" y="238" width="106" height="38" rx="5"/>
-      </g>
-      <g fill="#3ddc84"><circle cx="48" cy="65" r="4"/><circle cx="48" cy="113" r="4"/><circle cx="48" cy="161" r="4"/><circle cx="48" cy="209" r="4"/><circle cx="48" cy="257" r="4"/></g>
-      <g fill="#ffb020"><circle cx="64" cy="65" r="4"/><circle cx="64" cy="161" r="4"/></g>
-      <rect x="175" y="60" width="205" height="140" rx="10" fill="#0b2545" stroke="#fff" stroke-width="4"/>
-      <rect x="187" y="72" width="181" height="116" rx="4" fill="#102f58"/>
-      <path d="M200 160l22-30 18 18 24-36 30 40 30-22" fill="none" stroke="#3ddc84" stroke-width="4" stroke-linejoin="round"/>
-      <rect x="200" y="82" width="60" height="8" rx="3" fill="#5aa2ee"/><rect x="200" y="96" width="90" height="6" rx="3" fill="#335"/>
-      <path d="M255 200h50l8 30h-66z" fill="#c8d6e8"/><rect x="230" y="230" width="100" height="8" rx="4" fill="#c8d6e8"/>
-      <ellipse cx="300" cy="278" rx="70" ry="14" fill="#000" opacity=".25"/>
-      <g transform="translate(310 262)"><rect width="66" height="22" rx="5" fill="#2ca01c"/><text x="33" y="15" font-size="10" font-weight="800" fill="#fff" text-anchor="middle" font-family="Arial">QuickBooks</text></g>
-    </svg>
+    
+    <!-- Top-to-Bottom Sequenced Hero Media -->
+    <div class="hero-media-stack">
+      <div class="media-block">
+        <span class="media-title">IT Services</span>
+        <img class="hero-img" src="it_pic_2.jpg" alt="Enterprise IT Infrastructure & Security Services">
+      </div>
+      <div class="media-block">
+        <span class="media-title">QuickBooks Services</span>
+        <img class="hero-img" src="quick.bo_2.jpg" alt="QuickBooks Tech Support & Bookkeeping Team">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -156,21 +425,100 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:24px;font-size
 
 <section id="services"><div class="wrap">
   <h2>What we support</h2>
-  <p class="lead">Ten service areas, from server administration to QuickBooks. Pick the one closest to your problem and we will scope the rest together.</p>
+  <p class="lead">Enterprise IT services and QuickBooks support. Pick the category closest to your request and we will scope the details together.</p>
+  
   <div class="grid">
-    <article class="card"><div class="pic"><svg><use href="#i-linux"/></svg></div><div class="body"><h3>Linux Infrastructure</h3><ul><li>Server setup, patching, hardening</li><li>RHEL, CentOS, Oracle Linux, Ubuntu</li><li>Oracle RAC (OS and storage side)</li><li>WebLogic, Apache, Tomcat, JBoss</li></ul></div></article>
-    <article class="card"><div class="pic"><svg><use href="#i-win"/></svg></div><div class="body"><h3>Windows Infrastructure</h3><ul><li>Windows Server, Active Directory</li><li>DNS, DHCP, Group Policy</li><li>Desktop support, PowerShell automation</li></ul></div></article>
-    <article class="card"><div class="pic"><svg><use href="#i-mail"/></svg></div><div class="body"><h3>Windows &amp; Exchange Mail</h3><ul><li>Mailbox and Outlook profile setup</li><li>Autodiscover, modern auth, MFA</li><li>MX, SPF, DKIM validation</li></ul></div></article>
-    <article class="card"><div class="pic"><svg><use href="#i-db"/></svg></div><div class="body"><h3>Backup, Storage &amp; Databases</h3><ul><li>Veeam Backup &amp; Replication</li><li>NetApp storage and SAN</li><li>Oracle and SQL backup and restore</li><li>VMware vSphere</li></ul></div></article>
-    <article class="card"><div class="pic"><svg><use href="#i-cloud"/></svg></div><div class="body"><h3>Cloud &amp; Networking</h3><ul><li>AWS, Azure, GCP</li><li>LAN/WAN, VPN, firewalls</li><li>Automation in Bash, Python, PowerShell</li></ul></div></article>
-    <article class="card"><div class="pic"><svg><use href="#i-lock"/></svg></div><div class="body"><h3>Security &amp; Hardening</h3><ul><li>Server hardening</li><li>Access control</li><li>Vulnerability mitigation</li></ul></div></article>
+    <article class="card">
+      <div class="pic c-linux"><svg><use href="#i-linux"/></svg></div>
+      <div class="body">
+        <h3>Linux Infrastructure</h3>
+        <ul>
+          <li>Server setup, patching, hardening</li>
+          <li>RHEL, CentOS, Oracle Linux, Ubuntu</li>
+          <li>Oracle RAC (OS and storage side)</li>
+          <li>WebLogic, Apache, Tomcat, JBoss</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="pic c-win"><svg><use href="#i-win"/></svg></div>
+      <div class="body">
+        <h3>Windows Infrastructure</h3>
+        <ul>
+          <li>Windows Server, Active Directory</li>
+          <li>DNS, DHCP, Group Policy</li>
+          <li>Desktop support, PowerShell automation</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="pic c-mail"><svg><use href="#i-mail"/></svg></div>
+      <div class="body">
+        <h3>Windows &amp; Exchange Mail</h3>
+        <ul>
+          <li>Mailbox and Outlook profile setup</li>
+          <li>Autodiscover, modern auth, MFA</li>
+          <li>MX, SPF, DKIM validation</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="pic c-db"><svg><use href="#i-db"/></svg></div>
+      <div class="body">
+        <h3>Backup, Storage &amp; Databases</h3>
+        <ul>
+          <li>Veeam Backup &amp; Replication</li>
+          <li>NetApp storage and SAN</li>
+          <li>Oracle and SQL backup and restore</li>
+          <li>VMware vSphere</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="pic c-cloud"><svg><use href="#i-cloud"/></svg></div>
+      <div class="body">
+        <h3>Cloud &amp; Networking</h3>
+        <ul>
+          <li>AWS, Azure, GCP</li>
+          <li>LAN/WAN, VPN, firewalls</li>
+          <li>Automation in Bash, Python, PowerShell</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="pic c-lock"><svg><use href="#i-lock"/></svg></div>
+      <div class="body">
+        <h3>Security &amp; Hardening</h3>
+        <ul>
+          <li>Server hardening</li>
+          <li>Access control &amp; IAM</li>
+          <li>Vulnerability mitigation</li>
+        </ul>
+      </div>
+    </article>
   </div>
 </div></section>
 
 <section id="tech"><div class="wrap">
   <h2>Technologies</h2>
   <div class="tech">
-    <span>Linux: RHEL, CentOS, Oracle Linux, Ubuntu</span><span>Windows Server</span><span>Active Directory, DNS, DHCP</span><span>Microsoft Exchange</span><span>Veeam Backup &amp; Replication</span><span>NetApp Storage</span><span>Oracle RAC (infrastructure side)</span><span>WebLogic, Apache, Tomcat, JBoss</span><span>VMware vSphere</span><span>AWS, Azure, GCP</span><span>QuickBooks Desktop and Online</span><span>Bash, Python, PowerShell</span>
+    <span>Linux: RHEL, CentOS, Oracle Linux, Ubuntu</span>
+    <span>Windows Server</span>
+    <span>Active Directory, DNS, DHCP</span>
+    <span>Microsoft Exchange</span>
+    <span>Veeam Backup &amp; Replication</span>
+    <span>NetApp Storage</span>
+    <span>Oracle RAC (infrastructure side)</span>
+    <span>WebLogic, Apache, Tomcat, JBoss</span>
+    <span>VMware vSphere</span>
+    <span>AWS, Azure, GCP</span>
+    <span>QuickBooks Desktop and Online</span>
+    <span>Bash, Python, PowerShell</span>
   </div>
 </div></section>
 
@@ -178,15 +526,30 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:24px;font-size
   <span class="qb-label sm">QuickBooks</span>
   <h2 class="h2s">QuickBooks support: day-to-day activities</h2>
   <p class="lead">Desktop, Online and Server. We keep QuickBooks installed, hosted, backed up and running, and help your team with the daily work.</p>
-  <div class="qgrid"><div class="qi"><span class="ic"><svg><use href="#i-inv"/></svg></span><div><h4>Accounts Receivable</h4><p>Invoices, customer payments, credit memos, aging reports.</p></div></div><div class="qi"><span class="ic"><svg><use href="#i-bill"/></svg></span><div><h4>Accounts Payable</h4><p>Vendor bills, bill payments, vendor credits, unpaid bills.</p></div></div><div class="qi"><span class="ic"><svg><use href="#i-bank"/></svg></span><div><h4>Bank Reconciliation</h4><p>Match bank feeds, reconcile bank and cards, fix duplicates.</p></div></div><div class="qi"><span class="ic"><svg><use href="#i-pay"/></svg></span><div><h4>Payroll &amp; Employees</h4><p>Pay runs, deductions, remittances, employee setup.</p></div></div><div class="qi"><span class="ic"><svg><use href="#i-tax"/></svg></span><div><h4>Sales Tax (HST/GST)</h4><p>Tax codes, tax reports, filing period tracking.</p></div></div><div class="qi"><span class="ic"><svg><use href="#i-rec"/></svg></span><div><h4>Expenses &amp; Receipts</h4><p>Categorize transactions, receipt capture, bank rules.</p></div></div><div class="qi"><span class="ic"><svg><use href="#i-box"/></svg></span><div><h4>Inventory &amp; Products</h4><p>Items, price lists, purchase orders, stock adjustments.</p></div></div><div class="qi"><span class="ic"><svg><use href="#i-chart"/></svg></span><div><h4>Reports &amp; Month-End</h4><p>P&amp;L, Balance Sheet, journal entries, period close.</p></div></div></div>
-  <div class="tech"><span>Setup &amp; Desktop to Online migration</span><span>Multi-user hosting on Windows Server</span><span>Firewall and remote access</span><span>Company file backup &amp; repair</span><span>User roles and updates</span></div>
+  <div class="qgrid">
+    <div class="qi"><span class="ic"><svg><use href="#i-inv"/></svg></span><div><h4>Accounts Receivable</h4><p>Invoices, customer payments, credit memos, aging reports.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-bill"/></svg></span><div><h4>Accounts Payable</h4><p>Vendor bills, bill payments, vendor credits, unpaid bills.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-bank"/></svg></span><div><h4>Bank Reconciliation</h4><p>Match bank feeds, reconcile bank and cards, fix duplicates.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-pay"/></svg></span><div><h4>Payroll &amp; Employees</h4><p>Pay runs, deductions, remittances, employee setup.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-tax"/></svg></span><div><h4>Sales Tax (HST/GST)</h4><p>Tax codes, tax reports, filing period tracking.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-rec"/></svg></span><div><h4>Expenses &amp; Receipts</h4><p>Categorize transactions, receipt capture, bank rules.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-box"/></svg></span><div><h4>Inventory &amp; Products</h4><p>Items, price lists, purchase orders, stock adjustments.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-chart"/></svg></span><div><h4>Reports &amp; Month-End</h4><p>P&amp;L, Balance Sheet, journal entries, period close.</p></div></div>
+  </div>
+  <div class="tech">
+    <span>Setup &amp; Desktop to Online migration</span>
+    <span>Multi-user hosting on Windows Server</span>
+    <span>Firewall and remote access</span>
+    <span>Company file backup &amp; repair</span>
+    <span>User roles and updates</span>
+  </div>
   <p class="note">We support QuickBooks as an IT system and help with day-to-day use. For tax and accounting advice, please work with your accountant.</p>
 </div></section>
 
 <section id="about"><div class="wrap">
   <h2>A small team with enterprise experience</h2>
-  <p class="lead">We are experienced IT professionals specializing in Linux, job automation, middleware, database backup and restore, storage, systems and server backup engineering, and Windows Server support.</p>
-  <p class="lead">Together we bring over 15 years of enterprise-level experience across telecom, banking and insurance. We offer consulting to small businesses, MSPs and IT teams: expert support, project execution and on-demand troubleshooting.</p>
+  <p class="lead-wide">We are experienced IT professionals specializing in Linux, job automation, middleware, database backup and restore, storage, systems and server backup engineering, and Windows Server support.</p>
+  <p class="lead-wide">Together we bring over 15 years of enterprise-level experience across telecom, banking and insurance. We offer consulting to small businesses, MSPs and IT teams: expert support, project execution and on-demand troubleshooting.</p>
 </div></section>
 
 <section id="request" class="req"><div class="wrap reqgrid">
@@ -198,7 +561,7 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:24px;font-size
       <li><b>Agree the scope.</b> Project work, on-demand troubleshooting or ongoing support.</li>
       <li><b>We do the work.</b> Delivered by engineers who run these systems every day.</li>
     </ol>
-    <p>Or email us directly: <a style="color:#9fd0ff" href="mailto:info@techhelpto.com">info@techhelpto.com</a></p>
+    <p>Or email us directly: <a style="color:#60a5fa; font-weight:700;" href="mailto:info@techhelpto.com">info@techhelpto.com</a></p>
   </div>
 
   <form action="https://formsubmit.co/info@techhelpto.com" method="POST">
@@ -207,21 +570,48 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:24px;font-size
     <input type="hidden" name="_captcha" value="true">
     <input type="hidden" name="_next" value="https://www.techhelpto.com/#request">
     <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
-    <label>Your name <input type="text" name="name" required></label>
-    <label>Email <input type="email" name="email" required></label>
-    <label>Phone (optional) <input type="tel" name="phone"></label>
-    <label>Service needed
-      <select name="service" required>
-        <option value="">Select...</option>
-        <option>QuickBooks support</option><option>Linux infrastructure</option><option>Windows / Active Directory</option>
-        <option>Exchange / Mail</option><option>Backup &amp; Storage</option><option>Cloud / Network / Security</option><option>Other</option>
-      </select>
-    </label>
-    <label>Request details <textarea name="message" rows="5" required placeholder="Describe the system and the problem"></textarea></label>
-    <button class="btn" type="submit">Send request</button>
+    
+    <div class="form-row">
+      <label>Your name <input type="text" name="name" required></label>
+      <label>Email <input type="email" name="email" required></label>
+    </div>
+    
+    <div class="form-row">
+      <label>Phone (optional) <input type="tel" name="phone"></label>
+      <label>Service needed
+        <select name="service" required>
+          <option value="">Select...</option>
+          <option>QuickBooks support</option>
+          <option>Linux infrastructure</option>
+          <option>Windows / Active Directory</option>
+          <option>Exchange / Mail</option>
+          <option>Backup &amp; Storage</option>
+          <option>Cloud / Network / Security</option>
+          <option>Other</option>
+        </select>
+      </label>
+    </div>
+
+    <label>Request details <textarea name="message" rows="3" required placeholder="Describe system & problem"></textarea></label>
+    <button class="btn form-btn" type="submit">Send request</button>
   </form>
 </div></section>
 
 <footer>© 2026 Tech Help – Toronto Enterprise IT Solutions<br>Linux • Windows • Backup • Storage • Networking • Security • QuickBooks</footer>
+
+<script>
+function copyEmail() {
+  const emailText = "info@techhelpto.com";
+  navigator.clipboard.writeText(emailText).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = "Copied!";
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = "Copy Email";
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
 </body>
 </html>
