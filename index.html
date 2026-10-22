@@ -125,11 +125,9 @@ nav a:hover{color:var(--blue)}
 
 h2{font-size:2rem;margin:.1em 0 .2em;color:var(--navy)}
 .lead{max-width:720px;color:#445;margin-bottom:12px}
-
-/* Wider Lead Text specifically for the About section */
 .lead-wide{max-width:950px;color:#334155;font-size:1.08rem;line-height:1.65;margin-bottom:14px}
 
-/* --- UPDATED ENHANCED SERVICES GRID --- */
+/* Enhanced Services Grid */
 .grid {
   display: grid;
   gap: 22px;
@@ -336,6 +334,78 @@ textarea{resize:vertical}
   box-shadow:0 1px 0 #053261, 0 2px 4px rgba(0,0,0,.2);
 }
 
+/* Custom Modal Popup Window Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 37, 69, 0.75);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-card {
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 20px;
+  max-width: 440px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transform: scale(0.85);
+  transition: all 0.3s ease;
+  border: 1px solid #cbd5e1;
+}
+.modal-overlay.active .modal-card {
+  transform: scale(1);
+}
+.modal-icon {
+  width: 60px;
+  height: 60px;
+  background: #dcfce7;
+  color: var(--green);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.modal-card h3 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: 1.4rem;
+}
+.modal-card p {
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+.modal-close-btn {
+  background: linear-gradient(180deg, #0a66c2, #084f96);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
 .hp{position:absolute;left:-9999px}
 footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size:.88rem}
 
@@ -376,8 +446,8 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
     <span class="txt"><span class="logo-blink">Tech Help</span><span class="sub">Enterprise IT Consulting &middot; Toronto</span></span>
   </a>
   <nav>
-    <a href="#services">Services</a><a href="#tech">Technologies</a><a href="#quickbooks">QuickBooks</a><a href="#about">About</a><a href="#request">Contact</a>
-  </nav>   
+    <a href="#services">Services</a><a href="#quickbooks">QuickBooks</a><a href="#tech">Technologies</a><a href="#about">About</a><a href="#request">Contact</a>
+  </nav>
   <a class="btn" href="#request">Book a consultation</a>
 </header>
 
@@ -385,7 +455,7 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
   <div class="wrap">
     <div>
       <span class="tag">Toronto, Ontario</span>
-      <h1>Linux and Windows infrastructure, run by engineers from Banking and Telecom.</h1>
+      <h1>Linux and Windows infrastructure, run by engineers from banking and telecom.</h1>
       <p>Enterprise-grade support for Linux and Windows servers, desktops and hybrid environments. We help small businesses, MSPs and IT teams with project work, on-demand troubleshooting and QuickBooks support.</p>
       
       <!-- Highlighted Email with Copy Button -->
@@ -398,8 +468,8 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
       <p><a class="btn" href="#request">Book a consultation</a> <a class="btn alt" href="#services">See all services</a></p>
       
       <div class="stats">
-        <div><b>25+ years</b>combined, enterprise level Experience</div>
-        <div><b>Telecom, Banking</b>and Insurance</div>
+        <div><b>15+ years</b>combined, enterprise level</div>
+        <div><b>Telecom, banking</b>and insurance</div>
         <div><b>Linux, Windows</b>Veeam, NetApp, QuickBooks</div>
       </div>
     </div>
@@ -564,11 +634,10 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
     <p>Or email us directly: <a style="color:#60a5fa; font-weight:700;" href="mailto:info@techhelpto.com">info@techhelpto.com</a></p>
   </div>
 
-  <form action="https://formsubmit.co/info@techhelpto.com" method="POST">
+  <form id="contactForm" action="https://formsubmit.co/info@techhelpto.com" method="POST">
     <input type="hidden" name="_subject" value="New request from techhelpto.com">
     <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="true">
-    <input type="hidden" name="_next" value="https://www.techhelpto.com/#request">
+    <input type="hidden" name="_captcha" value="false">
     <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
     
     <div class="form-row">
@@ -593,11 +662,21 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
     </div>
 
     <label>Request details <textarea name="message" rows="3" required placeholder="Describe system & problem"></textarea></label>
-    <button class="btn form-btn" type="submit">Send request</button>
+    <button class="btn form-btn" id="submitBtn" type="submit">Send request</button>
   </form>
 </div></section>
 
 <footer>© 2026 Tech Help – Toronto Enterprise IT Solutions<br>Linux • Windows • Backup • Storage • Networking • Security • QuickBooks</footer>
+
+<!-- Confirmation Modal Popup Window -->
+<div id="thankYouModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-icon">✓</div>
+    <h3>Thank You!</h3>
+    <p>Your message has been successfully sent. Thank you for reaching out! Our team will review your request and get back to you within 24 hours or as early as possible.</p>
+    <button class="modal-close-btn" onclick="closeModal()">Close Window</button>
+  </div>
+</div>
 
 <script>
 function copyEmail() {
@@ -611,6 +690,44 @@ function copyEmail() {
       btn.classList.remove('copied');
     }, 2000);
   });
+}
+
+// Background AJAX Form Handler & Popup Trigger
+const form = document.getElementById('contactForm');
+const modal = document.getElementById('thankYouModal');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send request";
+    if (response.ok) {
+      modal.classList.add('active');
+      form.reset();
+    } else {
+      alert("Oops! There was a problem submitting your request. Please try emailing us directly at info@techhelpto.com");
+    }
+  }).catch(error => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send request";
+    alert("Oops! There was a network issue. Please try emailing us directly at info@techhelpto.com");
+  });
+});
+
+function closeModal() {
+  modal.classList.remove('active');
 }
 </script>
 </body>
