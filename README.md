@@ -1,5 +1,8 @@
 # techhelpTO
 
+
+xovo aeif kacu tomd  for google account itsolution.toronto@gmail.com
+
 hosted in squarespace.com
 
 how to setup in github
