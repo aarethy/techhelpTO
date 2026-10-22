@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +36,16 @@ nav a:hover{color:var(--blue)}
 .hero h1{font-size:2.3rem;line-height:1.2;margin:.2em 0}
 .hero p{opacity:.92;margin:.5em 0}
 .hero .tag{background:rgba(255,255,255,.15);padding:4px 12px;border-radius:20px;font-size:.85rem}
+
+/* Scroll Margins for Sticky Header Offset */
+#services, #tech, #about, #request {
+  scroll-margin-top: 75px;
+}
+.qb {
+  background: #eaf6e8;
+  padding: 20px 0;
+  scroll-margin-top: 75px; 
+}
 
 /* High-Visibility Email & Copy Button Styling */
 .email-box {
@@ -222,7 +233,6 @@ h2{font-size:2rem;margin:.1em 0 .2em;color:var(--navy)}
   margin-top: 1px;
 }
 
-.qb{background:#eaf6e8;padding:20px 0}
 .qb-label{display:inline-block;background:var(--green);color:#fff;font-weight:800;padding:9px 20px;border-radius:8px;letter-spacing:.6px;box-shadow:0 7px 18px rgba(44,160,28,.5),0 2px 0 rgba(0,0,0,.2);text-shadow:0 2px 5px rgba(0,0,0,.4);transform:rotate(-1.5deg)}
 .qb-label.sm{padding:5px 14px;font-size:.85rem;transform:none;box-shadow:0 4px 10px rgba(44,160,28,.45),0 1px 0 rgba(0,0,0,.2)}
 .qb-strip{background:#eaf6e8;border-bottom:1px solid #cfe8cb}
@@ -642,7 +652,7 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
     
     <div class="form-row">
       <label>Your name <input type="text" name="name" required></label>
-      <label>Your Email <input type="email" name="email" required></label>
+      <label>Email <input type="email" name="email" required></label>
     </div>
     
     <div class="form-row">
@@ -732,3 +742,6 @@ function closeModal() {
 </script>
 </body>
 </html>
+```
+
+</ElicitationsGroup>
