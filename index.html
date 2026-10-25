@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Toronto Enterprise IT Consulting | Tech Help</title>
-<meta name="description" content="Toronto IT consulting: Linux, Windows, backup, cloud, security and QuickBooks support for small businesses and MSPs.">
+<meta name="description" content="Toronto IT consulting and managed IT services: Linux, Windows, cloud, backup, security and QuickBooks support for small and medium businesses.">
 <style>
 :root{--blue:#0a66c2;--navy:#0b2545;--green:#2ca01c;--bg:#f4f7fb;--ink:#1b2430}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -32,102 +32,25 @@ nav a:hover{color:var(--blue)}
 
 .hero{background:linear-gradient(135deg,#0b2545,#13518f);color:#fff;padding:20px 0}
 .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.hero h1{font-size:2.3rem;line-height:1.2;margin:.2em 0}
+.hero h1{font-size:2.2rem;line-height:1.2;margin:.2em 0}
 .hero p{opacity:.92;margin:.5em 0}
 .hero .tag{background:rgba(255,255,255,.15);padding:4px 12px;border-radius:20px;font-size:.85rem}
+.hero .sub-h{font-size:1.15rem;opacity:.95}
 
-/* Scroll Margins for Sticky Header Offset */
-#services, #tech, #about, #request {
-  scroll-margin-top: 75px;
-}
-.qb {
-  background: #eaf6e8;
-  padding: 20px 0;
-  scroll-margin-top: 75px; 
-}
+#services,#managed,#quickbooks,#tech,#about,#request{scroll-margin-top:75px}
 
-/* High-Visibility Email & Copy Button Styling */
-.email-box {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin: 10px 0;
-}
-.highlight-email {
-  color: #60a5fa !important;
-  font-weight: 800;
-  font-size: 1.1rem;
-  text-decoration: none;
-  letter-spacing: .3px;
-}
-.highlight-email:hover {
-  text-decoration: underline;
-  color: #93c5fd !important;
-}
-.copy-btn {
-  background: #2563eb;
-  color: #ffffff;
-  border: none;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.copy-btn:hover {
-  background: #1d4ed8;
-  transform: translateY(-1px);
-}
-.copy-btn.copied {
-  background: var(--green);
-}
+.email-box{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.15);padding:8px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.3);margin:10px 0;flex-wrap:wrap}
+.highlight-email{color:#60a5fa !important;font-weight:800;font-size:1.1rem;text-decoration:none;letter-spacing:.3px}
+.highlight-email:hover{text-decoration:underline;color:#93c5fd !important}
+.copy-btn{background:#2563eb;color:#fff;border:none;padding:6px 14px;font-size:.85rem;font-weight:700;border-radius:6px;cursor:pointer;transition:all .2s ease;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.copy-btn:hover{background:#1d4ed8;transform:translateY(-1px)}
+.copy-btn.copied{background:var(--green)}
 
-/* Vertical Top-to-Bottom Stacked Layout for Hero Media */
-.hero-media-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.media-block {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.media-title {
-  font-size: 1rem;
-  font-weight: 800;
-  color: #38bdf8;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.media-title::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: var(--green);
-  border-radius: 50%;
-}
-.hero-img {
-  width: 100%;
-  height: auto;
-  max-height: 380px;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.45);
-  border: 2px solid rgba(255,255,255,.2);
-  background: #102f58;
-  display: block;
-}
+.hero-media-stack{display:flex;flex-direction:column;gap:16px}
+.media-block{display:flex;flex-direction:column;gap:6px}
+.media-title{font-size:1rem;font-weight:800;color:#38bdf8;text-transform:uppercase;letter-spacing:.8px;display:flex;align-items:center;gap:8px}
+.media-title::before{content:"";display:inline-block;width:10px;height:10px;background:var(--green);border-radius:50%}
+.hero-img{width:100%;height:auto;max-height:380px;object-fit:contain;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.45);border:2px solid rgba(255,255,255,.2);background:#102f58;display:block}
 
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
 .stats div{background:rgba(255,255,255,.1);padding:10px;border-radius:10px;font-size:.85rem}
@@ -137,108 +60,47 @@ h2{font-size:2rem;margin:.1em 0 .2em;color:var(--navy)}
 .lead{max-width:100%;color:#445;margin-bottom:12px}
 .lead-wide{max-width:950px;color:#334155;font-size:1.08rem;line-height:1.65;margin-bottom:14px}
 
-/* Enhanced Services Grid */
-.grid {
-  display: grid;
-  gap: 22px;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 20px;
-}
-.card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(11, 37, 69, 0.08);
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-}
-.card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 20px 38px rgba(10, 102, 194, 0.18);
-  border-color: #cbd5e1;
-}
-.pic {
-  height: 115px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background: linear-gradient(135deg, #0b2545, #1d4ed8);
-  border-bottom: 3px solid rgba(255, 255, 255, 0.15);
-}
-.pic.c-linux { background: linear-gradient(135deg, #0f172a, #1e3a8a); }
-.pic.c-win { background: linear-gradient(135deg, #0b2545, #0284c7); }
-.pic.c-mail { background: linear-gradient(135deg, #1e1b4b, #2563eb); }
-.pic.c-db { background: linear-gradient(135deg, #0f2d4a, #0369a1); }
-.pic.c-cloud { background: linear-gradient(135deg, #111827, #0284c7); }
-.pic.c-lock { background: linear-gradient(135deg, #062038, #0d9488); }
+/* High-level highlights */
+.highlights{background:#fff;border-bottom:1px solid #e2e8f0}
+.hl-grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);margin-top:16px}
+.hl{background:linear-gradient(145deg,#fff,#f1f6fc);border:1px solid #dbe3ed;border-top:4px solid var(--blue);border-radius:14px;padding:18px 20px;box-shadow:0 8px 20px rgba(11,37,69,.08)}
+.hl.fin{border-top-color:var(--green)}
+.hl h3{margin:0 0 6px;color:var(--navy);font-size:1.12rem}
+.hl p{margin:0;font-size:.94rem;color:#334155}
+.hl a{font-weight:700;font-size:.9rem;text-decoration:none}
 
-.pic svg {
-  width: 58px;
-  height: 58px;
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 1.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-  transition: transform 0.3s ease;
-}
-.card:hover .pic svg {
-  transform: scale(1.1);
-}
-.card .body {
-  padding: 20px 22px 22px;
-  flex: 1;
-}
-.card h3 {
-  margin: 0 0 12px;
-  color: var(--navy);
-  font-size: 1.18rem;
-  font-weight: 800;
-  letter-spacing: -0.2px;
-}
-.card ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.card li {
-  font-size: 0.92rem;
-  color: #334155;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  line-height: 1.4;
-}
-.card li::before {
-  content: "✓";
-  color: #2563eb;
-  font-weight: 900;
-  font-size: 0.95rem;
-  background: #eff6ff;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
+/* Services grid */
+.grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:20px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 25px rgba(11,37,69,.08);border:1px solid #e2e8f0;transition:all .3s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column}
+.card:hover{transform:translateY(-7px);box-shadow:0 20px 38px rgba(10,102,194,.18);border-color:#cbd5e1}
+.pic{height:115px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#0b2545,#1d4ed8);border-bottom:3px solid rgba(255,255,255,.15)}
+.pic.c-linux{background:linear-gradient(135deg,#0f172a,#1e3a8a)}
+.pic.c-win{background:linear-gradient(135deg,#0b2545,#0284c7)}
+.pic.c-mail{background:linear-gradient(135deg,#1e1b4b,#2563eb)}
+.pic.c-db{background:linear-gradient(135deg,#0f2d4a,#0369a1)}
+.pic.c-cloud{background:linear-gradient(135deg,#111827,#0284c7)}
+.pic.c-lock{background:linear-gradient(135deg,#062038,#0d9488)}
+.pic svg{width:58px;height:58px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));transition:transform .3s ease}
+.card:hover .pic svg{transform:scale(1.1)}
+.card .body{padding:20px 22px 22px;flex:1}
+.card h3{margin:0 0 12px;color:var(--navy);font-size:1.18rem;font-weight:800;letter-spacing:-.2px}
+.card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.card li{font-size:.92rem;color:#334155;display:flex;align-items:flex-start;gap:10px;line-height:1.4}
+.card li::before{content:"✓";color:#2563eb;font-weight:900;font-size:.95rem;background:#eff6ff;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 
-.qb-label{display:inline-block;background:var(--green);color:#fff;font-weight:800;padding:9px 20px;border-radius:8px;letter-spacing:.6px;box-shadow:0 7px 18px rgba(44,160,28,.5),0 2px 0 rgba(0,0,0,.2);text-shadow:0 2px 5px rgba(0,0,0,.4);transform:rotate(-1.5deg)}
-.qb-label.sm{padding:5px 14px;font-size:.85rem;transform:none;box-shadow:0 4px 10px rgba(44,160,28,.45),0 1px 0 rgba(0,0,0,.2)}
-.qb-strip{background:#eaf6e8;border-bottom:1px solid #cfe8cb}
-.qb-strip .wrap-s{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:10px 20px}
-.qb-strip p{margin:0;font-size:.95rem;flex:1;min-width:260px}
+/* Managed IT */
+.managed{background:#fff;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
+.mgrid{display:grid;gap:16px;grid-template-columns:repeat(4,1fr);margin:16px 0}
+.mi{background:var(--bg);border:1px solid #dbe3ed;border-radius:12px;padding:16px}
+.mi h4{margin:0 0 6px;color:var(--navy);font-size:1rem}
+.mi p{margin:0;font-size:.88rem;color:#445}
+.callout{background:#eff6ff;border-left:5px solid var(--blue);padding:12px 16px;border-radius:8px;font-size:.95rem;color:#1e3a5f}
+
+/* QuickBooks */
+.qb{background:#eaf6e8;padding:20px 0}
+.qb-label{display:inline-block;background:var(--green);color:#fff;font-weight:800;padding:5px 14px;font-size:.85rem;border-radius:8px;letter-spacing:.6px;box-shadow:0 4px 10px rgba(44,160,28,.45),0 1px 0 rgba(0,0,0,.2);text-shadow:0 2px 5px rgba(0,0,0,.4)}
 .h2s{font-size:1.5rem;margin:.3em 0 .1em}
-
+.qsub{margin:18px 0 4px;font-size:1.05rem;color:#1d7a10}
 .qgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:14px 0}
 .qi{display:flex;gap:12px;background:#fff;padding:12px 14px;border-radius:10px;box-shadow:0 4px 12px rgba(10,40,80,.12)}
 .qi .ic{width:40px;height:40px;flex:none;border-radius:10px;background:linear-gradient(135deg,#2ca01c,#0f5f0a);display:flex;align-items:center;justify-content:center}
@@ -246,186 +108,61 @@ h2{font-size:2rem;margin:.1em 0 .2em;color:var(--navy)}
 .qi h4{margin:0;font-size:.95rem;color:#1d7a10}.qi p{margin:2px 0 0;font-size:.85rem;color:#445}
 .qb .note{margin-top:12px;font-size:.88rem;background:#fff;border-left:5px solid var(--green);padding:10px 14px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
 
-/* Bolder & Attractive Technologies Pill Styling */
-.tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
-}
-.tech span {
-  background: linear-gradient(135deg, #ffffff, #f1f5f9);
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 0.92rem;
-  padding: 8px 16px;
-  border-radius: 30px;
-  border: 1px solid #dbe3ed;
-  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  transition: all 0.25s ease;
-  display: inline-flex;
-  align-items: center;
-  cursor: default;
-}
-.tech span:hover {
-  background: linear-gradient(135deg, #0a66c2, #0b2545);
-  color: #ffffff;
-  border-color: #0a66c2;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 18px rgba(10, 102, 194, 0.35);
-}
-.qb .tech span {
-  background: linear-gradient(135deg, #ffffff, #f0fdf4);
-  color: #15803d;
-  border: 1px solid #bbf7d0;
-  font-size: 0.88rem;
-  padding: 7px 14px;
-}
-.qb .tech span:hover {
-  background: linear-gradient(135deg, #2ca01c, #0f5f0a);
-  color: #ffffff;
-  border-color: #2ca01c;
-  box-shadow: 0 8px 18px rgba(44, 160, 28, 0.35);
-}
+/* Pills */
+.tech{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.tech span{background:linear-gradient(135deg,#fff,#f1f5f9);color:var(--navy);font-weight:700;font-size:.92rem;padding:8px 16px;border-radius:30px;border:1px solid #dbe3ed;box-shadow:0 4px 12px rgba(11,37,69,.08),inset 0 1px 0 rgba(255,255,255,.8);transition:all .25s ease;display:inline-flex;align-items:center;cursor:default}
+.tech span:hover{background:linear-gradient(135deg,#0a66c2,#0b2545);color:#fff;border-color:#0a66c2;transform:translateY(-3px) scale(1.02);box-shadow:0 8px 18px rgba(10,102,194,.35)}
+.qb .tech span{background:linear-gradient(135deg,#fff,#f0fdf4);color:#15803d;border:1px solid #bbf7d0;font-size:.88rem;padding:7px 14px}
+.qb .tech span:hover{background:linear-gradient(135deg,#2ca01c,#0f5f0a);color:#fff;border-color:#2ca01c;box-shadow:0 8px 18px rgba(44,160,28,.35)}
 
-/* Request Section & Modern 3D Compact Form */
+/* Why choose us */
+.certs h3{margin:22px 0 4px;color:var(--navy);font-size:1.15rem}
+.cert-grid{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin-top:10px}
+.cert{background:#fff;border:1px solid #dbe3ed;border-radius:12px;padding:14px 16px;box-shadow:0 4px 12px rgba(11,37,69,.06)}
+.cert h4{margin:0 0 4px;color:var(--blue);font-size:1rem}
+.cert p{margin:0;font-size:.88rem;color:#445}
+
+/* Request */
 .req{background:var(--navy);color:#fff;padding:24px 0}
 .req h2{color:#fff}
-.reqgrid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center}
+.reqgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.sla{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:6px 14px;border-radius:20px;font-weight:700;font-size:.9rem;margin:6px 0}
+.commit{margin-top:18px}
+.commit h3{margin:0 0 8px;color:#fff;font-size:1.2rem}
+.commit ul{margin:0;padding-left:20px}
+.commit li{margin-bottom:8px}
 
-form{
-  background:linear-gradient(145deg,#ffffff,#f0f4f9);
-  color:var(--ink);
-  padding:18px 20px;
-  border-radius:16px;
-  box-shadow:0 12px 28px rgba(0,0,0,.35), inset 0 1px 1px rgba(255,255,255,0.8), 0 4px 0 #cbd5e1;
-  border:1px solid #dbe3ed;
-  display:grid;
-  gap:8px;
-  max-width:440px;
-  margin:0 auto;
-}
+form{background:linear-gradient(145deg,#fff,#f0f4f9);color:var(--ink);padding:18px 20px;border-radius:16px;box-shadow:0 12px 28px rgba(0,0,0,.35),inset 0 1px 1px rgba(255,255,255,.8),0 4px 0 #cbd5e1;border:1px solid #dbe3ed;display:grid;gap:8px;max-width:440px;margin:0 auto}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 label{font-weight:600;font-size:.82rem;display:grid;gap:4px;color:#2c3e50}
-input,select,textarea{
-  font:inherit;
-  padding:8px 10px;
-  border:1px solid #cbd5e1;
-  border-radius:7px;
-  width:100%;
-  font-size:.88rem;
-  background:#f8fafc;
-  box-shadow:inset 0 2px 4px rgba(0,0,0,.04);
-  transition:all .2s ease;
-}
-input:focus,select:focus,textarea:focus{
-  outline:none;
-  border-color:var(--blue);
-  background:#fff;
-  box-shadow:0 0 0 3px rgba(10,102,194,.2), inset 0 1px 2px rgba(0,0,0,.02);
-}
+input,select,textarea{font:inherit;padding:8px 10px;border:1px solid #cbd5e1;border-radius:7px;width:100%;font-size:.88rem;background:#f8fafc;box-shadow:inset 0 2px 4px rgba(0,0,0,.04);transition:all .2s ease}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(10,102,194,.2),inset 0 1px 2px rgba(0,0,0,.02)}
 textarea{resize:vertical}
-.form-btn{
-  margin-top:4px;
-  padding:10px;
-  font-size:.95rem;
-  border-radius:8px;
-  background:linear-gradient(180deg,#0a66c2,#084f96);
-  color:#fff;
-  font-weight:700;
-  border:1px solid #063d75;
-  box-shadow:0 4px 0 #053261, 0 6px 12px rgba(0,0,0,.2);
-  text-shadow:0 1px 2px rgba(0,0,0,.3);
-  cursor:pointer;
-}
-.form-btn:active{
-  transform:translateY(3px);
-  box-shadow:0 1px 0 #053261, 0 2px 4px rgba(0,0,0,.2);
-}
+.form-btn{margin-top:4px;padding:10px;font-size:.95rem;border-radius:8px;background:linear-gradient(180deg,#0a66c2,#084f96);color:#fff;font-weight:700;border:1px solid #063d75;box-shadow:0 4px 0 #053261,0 6px 12px rgba(0,0,0,.2);text-shadow:0 1px 2px rgba(0,0,0,.3);cursor:pointer}
+.form-btn:active{transform:translateY(3px);box-shadow:0 1px 0 #053261,0 2px 4px rgba(0,0,0,.2)}
 
-/* Custom Modal Popup Window Styling */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(11, 37, 69, 0.75);
-  backdrop-filter: blur(5px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-.modal-card {
-  background: #ffffff;
-  padding: 32px 28px;
-  border-radius: 20px;
-  max-width: 440px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  transform: scale(0.85);
-  transition: all 0.3s ease;
-  border: 1px solid #cbd5e1;
-}
-.modal-overlay.active .modal-card {
-  transform: scale(1);
-}
-.modal-icon {
-  width: 60px;
-  height: 60px;
-  background: #dcfce7;
-  color: var(--green);
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-.modal-card h3 {
-  margin: 0 0 10px;
-  color: var(--navy);
-  font-size: 1.4rem;
-}
-.modal-card p {
-  color: #475569;
-  font-size: 0.98rem;
-  line-height: 1.5;
-  margin: 0 0 20px;
-}
-.modal-close-btn {
-  background: linear-gradient(180deg, #0a66c2, #084f96);
-  color: #ffffff;
-  border: none;
-  padding: 10px 24px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
-}
+/* Modal */
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(11,37,69,.75);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;z-index:1000;opacity:0;visibility:hidden;transition:all .3s ease}
+.modal-overlay.active{opacity:1;visibility:visible}
+.modal-card{background:#fff;padding:32px 28px;border-radius:20px;max-width:440px;width:90%;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.4);transform:scale(.85);transition:all .3s ease;border:1px solid #cbd5e1}
+.modal-overlay.active .modal-card{transform:scale(1)}
+.modal-icon{width:60px;height:60px;background:#dcfce7;color:var(--green);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:2rem;font-weight:bold;margin-bottom:16px}
+.modal-card h3{margin:0 0 10px;color:var(--navy);font-size:1.4rem}
+.modal-card p{color:#475569;font-size:.98rem;line-height:1.5;margin:0 0 20px}
+.modal-close-btn{background:linear-gradient(180deg,#0a66c2,#084f96);color:#fff;border:none;padding:10px 24px;font-size:.95rem;font-weight:700;border-radius:8px;cursor:pointer;box-shadow:0 4px 12px rgba(10,102,194,.3)}
 
 .hp{position:absolute;left:-9999px}
 footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size:.88rem}
 
 @media(max-width:860px){
   .hero .wrap,.reqgrid{grid-template-columns:1fr}
-  .grid{grid-template-columns:repeat(2,1fr)}
+  .grid,.hl-grid,.cert-grid{grid-template-columns:repeat(2,1fr)}
+  .mgrid{grid-template-columns:repeat(2,1fr)}
   nav{margin-left:0}
-  .hero h1{font-size:1.8rem}
+  .hero h1{font-size:1.7rem}
 }
 @media(max-width:560px){
-  .grid{grid-template-columns:1fr}
+  .grid,.hl-grid,.cert-grid,.mgrid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
 }
 </style>
@@ -455,7 +192,7 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
     <span class="txt"><span class="logo-blink">Tech Help</span><span class="sub">Enterprise IT Consulting &middot; Toronto</span></span>
   </a>
   <nav>
-    <a href="#services">Services</a><a href="#quickbooks">QuickBooks</a><a href="#tech">Technologies</a><a href="#about">About</a><a href="#request">Contact</a>
+    <a href="#services">Services</a><a href="#managed">Managed IT</a><a href="#quickbooks">QuickBooks</a><a href="#tech">Technologies</a><a href="#about">Why Choose Us</a><a href="#request">Contact</a>
   </nav>
   <a class="btn" href="#request">Book a consultation</a>
 </header>
@@ -464,26 +201,24 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
   <div class="wrap">
     <div>
       <span class="tag">Toronto, Ontario</span>
-      <h1>Linux and Windows infrastructure, run by engineers from banking and telecom.</h1>
-      <p>Enterprise-grade support for Linux and Windows servers, desktops and hybrid environments. We help small businesses, MSPs and IT teams with project work, on-demand troubleshooting and QuickBooks support.</p>
-      
-      <!-- Highlighted Email with Copy Button -->
+      <h1>Enterprise-Grade IT Infrastructure &amp; Consulting for Small to Medium Businesses</h1>
+      <p class="sub-h">Delivering high-availability Linux, Windows, and Cloud solutions tailored to your operational needs.</p>
+
       <div class="email-box">
-        <span>Email:</span> 
+        <span>Email:</span>
         <a id="emailAddr" class="highlight-email" href="mailto:info@techhelpto.com">info@techhelpto.com</a>
         <button class="copy-btn" onclick="copyEmail()">Copy Email</button>
       </div>
 
       <p><a class="btn" href="#request">Book a consultation</a> <a class="btn alt" href="#services">See all services</a></p>
-      
+
       <div class="stats">
-        <div><b>25+ years</b>combined, enterprise level experience </div>
-        <div><b>Telecom, banking</b>and insurance</div>
-        <div><b>Linux, Windows</b>Veeam, NetApp, QuickBooks</div>
+        <div><b>25+ years combined</b>Enterprise experience in telecom, banking and financial services</div>
+        <div><b>Certified engineers</b>Red Hat, Microsoft, Cisco and more</div>
+        <div><b>1-2 day response</b>Direct access to senior engineers</div>
       </div>
     </div>
-    
-    <!-- Top-to-Bottom Sequenced Hero Media -->
+
     <div class="hero-media-stack">
       <div class="media-block">
         <span class="media-title">IT Services</span>
@@ -497,15 +232,27 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
   </div>
 </section>
 
-<section class="qb-strip"><div class="wrap-s">
-  <span class="qb-label sm">QuickBooks</span>
-  <p><b>Also supporting QuickBooks:</b> Accounts Receivable, Accounts Payable, Bank Reconciliation, Payroll, Sales Tax and month-end reports. <a href="#quickbooks">See details</a></p>
+<section class="highlights"><div class="wrap-s">
+  <div class="hl-grid">
+    <div class="hl">
+      <h3>Core Infrastructure</h3>
+      <p>Linux &amp; Windows Server deployment, management, and performance tuning.</p>
+    </div>
+    <div class="hl">
+      <h3>Cloud &amp; Virtualization</h3>
+      <p>Hybrid cloud migration, maintenance, and virtualized environments built for uptime.</p>
+    </div>
+    <div class="hl fin">
+      <h3>Financial &amp; ERP Systems</h3>
+      <p>Application support, including end-to-end QuickBooks management. <a href="#quickbooks">QuickBooks details &rarr;</a></p>
+    </div>
+  </div>
 </div></section>
 
 <section id="services"><div class="wrap">
   <h2>What we support</h2>
-  <p class="lead">Enterprise IT services and QuickBooks support. Pick the category closest to your request and we will scope the details together.</p>
-  
+  <p class="lead">Enterprise IT services for your business. Pick the category closest to your request and we will scope the details together.</p>
+
   <div class="grid">
     <article class="card">
       <div class="pic c-linux"><svg><use href="#i-linux"/></svg></div>
@@ -583,6 +330,47 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
   </div>
 </div></section>
 
+<section id="managed" class="managed"><div class="wrap">
+  <h2>Managed IT Services</h2>
+  <p class="lead-wide">Think of it as an outsourced IT department. Instead of calling someone only when something breaks, we look after your systems every day, so problems are caught early and your team can focus on running the business. This is what is often called <b>MSP (Managed Service Provider)</b> support, and it is a good fit for offices such as law firms, dental and medical clinics, accountants and other professional practices.</p>
+  <div class="mgrid">
+    <div class="mi"><h4>Helpdesk &amp; On-Site Support</h4><p>Fast help for staff with computers, email, printers and logins, by phone, remote session or on-site visit.</p></div>
+    <div class="mi"><h4>Cloud Management</h4><p>We run and maintain your Microsoft 365, AWS, Azure or hosted systems, including users, access and costs.</p></div>
+    <div class="mi"><h4>Monitoring &amp; Maintenance</h4><p>Servers, networks and workstations are watched and patched regularly so issues are fixed before they cause downtime.</p></div>
+    <div class="mi"><h4>Data Backup &amp; Disaster Recovery</h4><p>Automated backups with tested restores, so your data can be recovered after a failure, ransomware or human error.</p></div>
+  </div>
+  <p class="callout">Predictable support, fewer surprises and one team accountable for your IT. <a href="#request">Ask us what a managed plan would look like for your office.</a></p>
+</div></section>
+
+<section id="quickbooks" class="qb"><div class="wrap-s">
+  <span class="qb-label">QuickBooks</span>
+  <h2 class="h2s">QuickBooks Support: everything in one place</h2>
+  <p class="lead">Desktop, Online and Server. We keep QuickBooks installed, hosted, backed up and running, and help your team with the daily work.</p>
+
+  <h3 class="qsub">Day-to-day activities</h3>
+  <div class="qgrid">
+    <div class="qi"><span class="ic"><svg><use href="#i-inv"/></svg></span><div><h4>Accounts Receivable</h4><p>Invoices, customer payments, credit memos, aging reports.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-bill"/></svg></span><div><h4>Accounts Payable</h4><p>Vendor bills, bill payments, vendor credits, unpaid bills.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-bank"/></svg></span><div><h4>Bank Reconciliation</h4><p>Match bank feeds, reconcile bank and cards, fix duplicates.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-pay"/></svg></span><div><h4>Payroll &amp; Employees</h4><p>Pay runs, deductions, remittances, employee setup.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-tax"/></svg></span><div><h4>Sales Tax (HST/GST)</h4><p>Tax codes, tax reports, filing period tracking.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-rec"/></svg></span><div><h4>Expenses &amp; Receipts</h4><p>Categorize transactions, receipt capture, bank rules.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-box"/></svg></span><div><h4>Inventory &amp; Products</h4><p>Items, price lists, purchase orders, stock adjustments.</p></div></div>
+    <div class="qi"><span class="ic"><svg><use href="#i-chart"/></svg></span><div><h4>Reports &amp; Month-End</h4><p>P&amp;L, Balance Sheet, journal entries, period close.</p></div></div>
+  </div>
+
+  <h3 class="qsub">Technical &amp; IT services</h3>
+  <div class="tech">
+    <span>QuickBooks Desktop and Online</span>
+    <span>Setup &amp; Desktop to Online migration</span>
+    <span>Multi-user hosting on Windows Server</span>
+    <span>Firewall and remote access</span>
+    <span>Company file backup &amp; repair</span>
+    <span>User roles and updates</span>
+  </div>
+  <p class="note">We support QuickBooks as an IT system and help with day-to-day use. For tax and accounting advice, please work with your accountant.</p>
+</div></section>
+
 <section id="tech"><div class="wrap">
   <h2>Technologies</h2>
   <div class="tech">
@@ -596,51 +384,39 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
     <span>WebLogic, Apache, Tomcat, JBoss</span>
     <span>VMware vSphere</span>
     <span>AWS, Azure, GCP</span>
-    <span>QuickBooks Desktop and Online</span>
     <span>Bash, Python, PowerShell</span>
   </div>
 </div></section>
 
-<section id="quickbooks" class="qb"><div class="wrap-s">
-  <span class="qb-label sm">QuickBooks</span>
-  <h2 class="h2s">QuickBooks support: day-to-day activities</h2>
-  <p class="lead">Desktop, Online and Server. We keep QuickBooks installed, hosted, backed up and running, and help your team with the daily work.</p>
-  <div class="qgrid">
-    <div class="qi"><span class="ic"><svg><use href="#i-inv"/></svg></span><div><h4>Accounts Receivable</h4><p>Invoices, customer payments, credit memos, aging reports.</p></div></div>
-    <div class="qi"><span class="ic"><svg><use href="#i-bill"/></svg></span><div><h4>Accounts Payable</h4><p>Vendor bills, bill payments, vendor credits, unpaid bills.</p></div></div>
-    <div class="qi"><span class="ic"><svg><use href="#i-bank"/></svg></span><div><h4>Bank Reconciliation</h4><p>Match bank feeds, reconcile bank and cards, fix duplicates.</p></div></div>
-    <div class="qi"><span class="ic"><svg><use href="#i-pay"/></svg></span><div><h4>Payroll &amp; Employees</h4><p>Pay runs, deductions, remittances, employee setup.</p></div></div>
-    <div class="qi"><span class="ic"><svg><use href="#i-tax"/></svg></span><div><h4>Sales Tax (HST/GST)</h4><p>Tax codes, tax reports, filing period tracking.</p></div></div>
-    <div class="qi"><span class="ic"><svg><use href="#i-rec"/></svg></span><div><h4>Expenses &amp; Receipts</h4><p>Categorize transactions, receipt capture, bank rules.</p></div></div>
-    <div class="qi"><span class="ic"><svg><use href="#i-box"/></svg></span><div><h4>Inventory &amp; Products</h4><p>Items, price lists, purchase orders, stock adjustments.</p></div></div>
-    <div class="qi"><span class="ic"><svg><use href="#i-chart"/></svg></span><div><h4>Reports &amp; Month-End</h4><p>P&amp;L, Balance Sheet, journal entries, period close.</p></div></div>
-  </div>
-  <div class="tech">
-    <span>Setup &amp; Desktop to Online migration</span>
-    <span>Multi-user hosting on Windows Server</span>
-    <span>Firewall and remote access</span>
-    <span>Company file backup &amp; repair</span>
-    <span>User roles and updates</span>
-  </div>
-  <p class="note">We support QuickBooks as an IT system and help with day-to-day use. For tax and accounting advice, please work with your accountant.</p>
-</div></section>
+<section id="about" class="certs"><div class="wrap">
+  <h2>Why Choose Us: Our Team</h2>
+  <p class="lead-wide">Our team consists of certified systems engineers with over 25 years of combined IT experience in Telecom, Banking, and Financial Services.</p>
+  <p class="lead-wide">We bring the rigorous security, uptime, and compliance standards of large enterprise operations directly to your small or medium-sized business.</p>
 
-<section id="about"><div class="wrap">
-  <h2>A small team with enterprise experience</h2>
-  <p class="lead-wide">We are experienced IT professionals specializing in Linux, job automation, middleware, database backup and restore, storage, systems and server backup engineering, and Windows Server support.</p>
-  <p class="lead-wide">Together we bring over 15 years of enterprise-level experience across telecom, banking and insurance. We offer consulting to small businesses, MSPs and IT teams: expert support, project execution and on-demand troubleshooting.</p>
+  <h3>Team Certifications</h3>
+  <!-- EDIT: replace these vendor-level entries with the exact certification names your team holds. -->
+  <div class="cert-grid">
+    <div class="cert"><h4>Red Hat</h4><p>Red Hat certified system administration and engineering (RHCSA / RHCE).</p></div>
+    <div class="cert"><h4>Microsoft</h4><p>Microsoft certifications for Windows Server, Active Directory and Microsoft 365 / Azure.</p></div>
+    <div class="cert"><h4>Networking (Cisco)</h4><p>Cisco network certifications covering LAN/WAN, routing, switching and security.</p></div>
+  </div>
 </div></section>
 
 <section id="request" class="req"><div class="wrap reqgrid">
   <div>
-    <h2>Send us your request</h2>
-    <p>Toronto IT consulting: Linux support, Windows server support, Veeam backup design, NetApp storage management, Oracle RAC troubleshooting, QuickBooks support and automation services.</p>
-    <ol>
-      <li><b>Tell us what you need.</b> A short description of the system and the problem is enough.</li>
-      <li><b>Agree the scope.</b> Project work, on-demand troubleshooting or ongoing support.</li>
-      <li><b>We do the work.</b> Delivered by engineers who run these systems every day.</li>
-    </ol>
-    <p>Or email us directly: <a style="color:#60a5fa; font-weight:700;" href="mailto:info@techhelpto.com">info@techhelpto.com</a></p>
+    <h2>Get Expert Technical Assistance</h2>
+    <p>Please briefly describe your current environment (e.g., Windows Server, Linux, Cloud) and the operational issue or project goal. Our engineering team will review and respond within 1-2 business days.</p>
+    <span class="sla">Response time: 1-2 business days</span>
+
+    <div class="commit">
+      <h3>Our Service Commitments</h3>
+      <ul>
+        <li><b>Direct Engineer Access:</b> Work directly with senior systems administrators, with no frontline call centers or generic scripts.</li>
+        <li><b>Security &amp; Compliance:</b> Every project is handled with strict confidentiality, data protection protocols, and security best practices.</li>
+      </ul>
+    </div>
+
+    <p style="margin-top:18px">Or email us directly: <a style="color:#60a5fa; font-weight:700;" href="mailto:info@techhelpto.com">info@techhelpto.com</a></p>
   </div>
 
   <form id="contactForm" action="https://formsubmit.co/info@techhelpto.com" method="POST">
@@ -648,17 +424,18 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="false">
     <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
-    
+
     <div class="form-row">
       <label>Your name <input type="text" name="name" required></label>
       <label>Your Email <input type="email" name="email" required></label>
     </div>
-    
+
     <div class="form-row">
       <label>Phone (optional) <input type="tel" name="phone"></label>
       <label>Service needed
         <select name="service" required>
           <option value="">Select...</option>
+          <option>Managed IT Services</option>
           <option>QuickBooks support</option>
           <option>Linux infrastructure</option>
           <option>Windows / Active Directory</option>
@@ -670,19 +447,18 @@ footer{background:#071a33;color:#b8c6d8;text-align:center;padding:18px;font-size
       </label>
     </div>
 
-    <label>Request details <textarea name="message" rows="3" required placeholder="Describe system & problem"></textarea></label>
+    <label>Environment &amp; request details <textarea name="message" rows="3" required placeholder="Your environment (Windows Server, Linux, Cloud...) and the issue or project goal"></textarea></label>
     <button class="btn form-btn" id="submitBtn" type="submit">Send request</button>
   </form>
 </div></section>
 
-<footer>© 2026 Tech Help – Toronto Enterprise IT Solutions<br>Linux • Windows • Backup • Storage • Networking • Security • QuickBooks</footer>
+<footer>© 2026 Tech Help – Toronto Enterprise IT Solutions<br>Linux • Windows • Cloud • Backup • Storage • Networking • Security • QuickBooks</footer>
 
-<!-- Confirmation Modal Popup Window -->
 <div id="thankYouModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-icon">✓</div>
     <h3>Thank You!</h3>
-    <p>Your message has been successfully sent. Thank you for reaching out! Our team will review your request and get back to you within 24 hours or as early as possible.</p>
+    <p>Your message has been successfully sent. Our team will review your request and respond within 1-2 business days.</p>
     <button class="modal-close-btn" onclick="closeModal()">Close Window</button>
   </div>
 </div>
@@ -701,7 +477,6 @@ function copyEmail() {
   });
 }
 
-// Background AJAX Form Handler & Popup Trigger
 const form = document.getElementById('contactForm');
 const modal = document.getElementById('thankYouModal');
 const submitBtn = document.getElementById('submitBtn');
@@ -716,9 +491,7 @@ form.addEventListener('submit', function(e) {
   fetch(form.action, {
     method: 'POST',
     body: formData,
-    headers: {
-      'Accept': 'application/json'
-    }
+    headers: { 'Accept': 'application/json' }
   }).then(response => {
     submitBtn.disabled = false;
     submitBtn.textContent = "Send request";
@@ -741,6 +514,3 @@ function closeModal() {
 </script>
 </body>
 </html>
-```
-
-</ElicitationsGroup>
